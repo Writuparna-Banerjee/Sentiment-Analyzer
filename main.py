@@ -176,7 +176,7 @@ def site_review(u):
 def home():
     return render_template('home.html')
 
-@app.route('/search_validation', methods=['POST','GET'])
+@app.route('/search_validation', methods=['POST'])
 def search_validation():
     movie_name =request.form.get('text')
     movies, url_movie_detail_link=search_item(movie_name)
