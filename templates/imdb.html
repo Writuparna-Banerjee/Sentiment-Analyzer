@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block section %}
+
+<div class="row">
+    <div class="offset-md-4 col-md-4">
+        <h1 class="text-md-center" style="color:blue">Search Result</h1>
+        <table>
+            <tr>
+                <th>Movie</th>
+                <th>Movie ID</th>
+            </tr>
+            {% for i,j in X %}
+            <tr>
+                <td class="text-success"><strong>{{i}}</strong></td><br>
+                <form action="post">
+                    <td name="movie_id"><a class="text-success" href="{{url_for('movie_ul',type=j)}}"><strong>{{j}}</strong></a></td><br>
+                </form>
+
+
+            </tr>
+
+            {% endfor%}
+        </table>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
